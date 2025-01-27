@@ -1,9 +1,11 @@
 // control + c                               turn off
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
+
 
 const users = require("./routes/users");
-// const auth = require("./routes/auth");
+const auth = require("./routes/auth");
 const transfers = require("./routes/transactions");
 
 // const error = require("./utilities/error");
@@ -14,6 +16,8 @@ const port = 8085;
 // Parsing Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
+
+// app.use(express.static(path.join(__dirname, "logInPage")));
 
 
 
@@ -33,12 +37,9 @@ app.use("/accounts", function (req, res, next) {
   next();
 });
 
-// app.use("/auth", auth);
+app.use("/auth", auth);
 app.use("/accounts", users);
 app.use("/transactions", transfers);
-
-
-
 
 app.get("/", (req, res) => {
     res.json({
