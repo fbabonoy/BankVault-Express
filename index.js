@@ -54,6 +54,11 @@ app.get("/", (req, res) => {
                 rel: "",
                 type: "GET",
             },
+            {
+                href: "/auth",
+                rel: "",
+                type: "GET",
+            },
         ],
     });
 });
