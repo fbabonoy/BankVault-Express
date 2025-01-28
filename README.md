@@ -43,6 +43,7 @@ BankVault Express is a simple banking application built with Node.js and Express
 <!-- http://localhost:8085/accounts/johndoe@example.compassword123/transactions/txn1/?api-key=admin -->
 
 - `DELETE /accounts/:id/transactions/:transactionId`: Remove a specific transaction 
+<!-- http://localhost:8085/accounts/johndoe@example.compassword123/transactions/txn1.?api-key=admin -->
 
 
 <!-- if there is time -->

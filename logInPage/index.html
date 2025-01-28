@@ -111,9 +111,11 @@
             if (e.target.id !== "login") return
 
 
+
+
             if (email.value && password.value && isValidEmail(email.value)) {
-               
-                window.location.href = `/accounts/johndoe@example.compassword123/?api-key=admin`
+
+                window.location.href = `/accounts/${email.value + password.value}/?api-key=admin`
             } else if (!isValidEmail(email.value)) {
                 alert("use a valid email")
             } else {
@@ -121,6 +123,8 @@
             }
 
         })
+
+        
 
     </script>
 </body>
