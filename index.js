@@ -1,4 +1,3 @@
-// control + c                               turn off
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -8,26 +7,18 @@ const users = require("./routes/users");
 const auth = require("./routes/auth");
 const transfers = require("./routes/transactions");
 
-// const error = require("./utilities/error");
+const error = require("./utilities/error.mjs");
 
 const app = express();
 const port = 8085;
 
-// Parsing Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
 
-// app.use(express.static(path.join(__dirname, "logInPage")));
-
-
-
-// Valid API Keys.
 apiKeys = ["admin"];
-
 
 app.use("/accounts", function (req, res, next) {
   var key = req.query["api-key"];
-//   console.log(key);
   
 
   if (!key) next(error(400, "API Key Required"));

@@ -9,7 +9,8 @@ const path = require("path");
 
 router
     .route("/")
-    .get((req, res)=>{        
+    .get((req, res)=>{
+                
         res.sendFile(path.join(__dirname,"..", "logInPage", "index.html"));
     })
     .post((req, res, next) => {

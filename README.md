@@ -15,8 +15,6 @@ BankVault Express is a simple banking application built with Node.js and Express
 
 ## Technologies Used
 - **Backend**: Node.js, Express
-<!-- - **Templating Engine**: EJS -->
-
 
 ## API Endpoints
 
@@ -31,12 +29,7 @@ BankVault Express is a simple banking application built with Node.js and Express
 
 
 <!-- if there is time -->
-<!-- ### Authentication (Bonus)
-- `POST /auth/register`: Register a new user.
-- `POST /auth/login`: Log in as an existing user. -->
-
-
-## License
-This project is open-source and available under the [MIT License](LICENSE).
-
+### Authentication (Bonus)
+- `POST /auth`: sends file with form
+<!-- there is no real authentication though -->
 
