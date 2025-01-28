@@ -48,7 +48,7 @@ http://localhost:8085/accounts/johndoe@example.compassword123/transactions/txn1.
 
 <!-- if there is time -->
 ### Authentication (Bonus)
-- `POST /auth`: sends file with form
+- `POST /auth`: sends file with form.                                                                       
 http://localhost:8085/auth
 
 <!-- there is no real authentication though -->
