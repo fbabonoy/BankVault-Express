@@ -19,15 +19,12 @@ BankVault Express is a simple banking application built with Node.js and Express
 ## API Endpoints
 
 ### routes
-
-
 - `GET /accounts`: explains data.                                                  
 - `POST /accounts`: Create a new account.                                                  
 http://localhost:8085/accounts/?api-key=admin
 
 - `GET /transactions`: View all transactions history.                                                     
 http://localhost:8085/transactions
-
 
 - `GET /accounts/:id`: root explanation.
 - `PATCH /accounts/:id`: updates account
@@ -53,6 +50,9 @@ http://localhost:8085/accounts/johndoe@example.compassword123/transactions/txn1.
 
 <!-- if there is time -->
 ### Authentication (Bonus)
+- authentication was not finished still needs to add token and remove after a period of time.
+- missing registration form <a> link was used for testing
+
 - `GET /auth`: sends file with form. 
 - `POST /auth`: redirects.                                                                       
 http://localhost:8085/auth
