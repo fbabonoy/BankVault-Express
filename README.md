@@ -21,13 +21,17 @@ BankVault Express is a simple banking application built with Node.js and Express
 ### routes
 
 
+- `GET /accounts`: explains data.                                                  
 - `POST /accounts`: Create a new account.                                                  
 http://localhost:8085/accounts/?api-key=admin
 
 - `GET /transactions`: View all transactions history.                                                     
 http://localhost:8085/transactions
 
-- `POST /accounts/:id`: show an account with id
+
+- `GET /accounts/:id`: root explanation.
+- `PATCH /accounts/:id`: updates account
+- `DELETE /accounts/:id`: deletes selected account
 http://localhost:8085/accounts/johndoe@example.compassword123/?api-key=admin
 
 - `POST /accounts/:id/deposit`: Deposit money into an account.
@@ -40,6 +44,7 @@ http://localhost:8085/accounts/johndoe@example.compassword123/withdraw/?api-key=
 http://localhost:8085/accounts/johndoe@example.compassword123/transactions/?api-key=admin
 
 - `GET /accounts/:id/transactions/:transactionId`: View a specific transaction detail.
+- `DELETE /accounts/:id/transactions/:transactionId`: deletes selected transfer
 http://localhost:8085/accounts/johndoe@example.compassword123/transactions/txn1/?api-key=admin
 
 - `DELETE /accounts/:id/transactions/:transactionId`: Remove a specific transaction 
@@ -48,7 +53,8 @@ http://localhost:8085/accounts/johndoe@example.compassword123/transactions/txn1.
 
 <!-- if there is time -->
 ### Authentication (Bonus)
-- `POST /auth`: sends file with form.                                                                       
+- `GET /auth`: sends file with form. 
+- `POST /auth`: redirects.                                                                       
 http://localhost:8085/auth
 
 <!-- there is no real authentication though -->
